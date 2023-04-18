@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {{/* Title */}}
   {{ if .IsHome -}}
-  <title>{{ .Title | emojify }} &middot; Personal Website | Portfolio & Blog</title>
-  <meta name="title" content="{{ .Title | emojify }} &middot; Personal Website | Portfolio & Blog" />
-  <meta property="og:title" content="{{ .Title | emojify }} &middot; Personal Website | Portfolio & Blog" />
-  <meta name="twitter:title" content="{{ .Title | emojify }} &middot; Personal Website | Portfolio & Blog" />
+  <title>{{ .Site.Title | emojify }} &middot; {{ .Title | emojify }}</title>
+  <meta name="title" content="{{ .Site.Title | emojify }} &middot; {{ .Title | emojify }}" />
+  <meta property="og:title" content="{{ .Site.Title | emojify }} &middot; {{ .Title | emojify }}" />
+  <meta name="twitter:title" content="{{ .Site.Title | emojify }} &middot; {{ .Title | emojify }}" />
   {{- else -}}
   <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
   <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
