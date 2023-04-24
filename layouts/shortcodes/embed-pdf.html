@@ -86,8 +86,8 @@
 
 <div class="pdf-paginator-item" id="pdf-paginator-{{ substr (.Get "url" | md5) 0 8 }}" >
     <div class="pdf-paginator-wrap">
-        <a class="pdf-paginator !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" role="button" id="pdf-prev-{{ substr (.Get "url" | md5) 0 8 }}">Previous</a>
-        <a class="pdf-paginator !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" role="button" id="pdf-next-{{ substr (.Get "url" | md5) 0 8 }}">Next</a>
+    <a class="pdf-paginator !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" role="button" id="pdf-prev-{{ substr (.Get "url" | md5) 0 8 }}">{{ if not (.Get "hidePaginator") }}Previous{{ end }}</a>
+        <a class="pdf-paginator !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" role="button" id="pdf-next-{{ substr (.Get "url" | md5) 0 8 }}">{{ if not (.Get "hidePaginator") }}Next{{ end }}</a>
     </div>
     <span>
       <span class="pdf-pagenum" id="pdf-pagenum-{{ substr (.Get "url" | md5) 0 8 }}"></span> / <span class="pdf-pagecount" id="pdf-pagecount-{{ substr (.Get "url" | md5) 0 8 }}"></span>
