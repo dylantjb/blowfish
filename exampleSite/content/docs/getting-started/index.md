@@ -197,7 +197,7 @@ Both menus are completely optional and can be commented out if not required. Use
 
 ### Nested menus
 
-The theme also supports nested menus. In order to use them you just need to define a parent entry in `menu.toml` and its sub-menus using the `parent` parameter to reference the parent. All properties can be used for sub-menus. Note that `pageRef` and `url` will be ignored for the parent entry. Nested menus is only available in the main menu not for the footer.
+The theme also supports nested menus. In order to use them you just need to define a parent entry in `menu.toml` and its sub-menus using the `parent` parameter to reference the parent. All properties can be used for sub-menus. `pageRef` and `url` can also be used in the parent entry. Nested menus are only available in the main menu not for the footer.
 
 ```toml
 # config/_default/menus.toml
@@ -228,7 +228,8 @@ The theme also supports nested menus. In order to use them you just need to defi
 
 ### Sub-Navigation menu
 
-Additionally, you can also configure a sub-navigation menu. Just define new menu entries as `subnavigation` in `menu.toml`. This will render a second line with caregories below the main header menu.
+Additionally, you can also configure a sub-navigation menu. Just define new menu entries as `subnavigation` in `menus.toml`.
+This will render a second line with sub-categories below the main header menu.
 
 ```toml
 # config/_default/menus.toml
@@ -244,11 +245,11 @@ Additionally, you can also configure a sub-navigation menu. Just define new menu
   weight = 20
 ```
 
-
+The default `name` is the `pageRef` title cased.
 
 ## Thumbnails & Backgrounds
 
-Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article strucutre, you just need to place an image file (almost all formats are supported bue we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
+Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article strucutre, you just need to place an image file (almost all formats are supported but we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
 
 [Here]({{< ref "thumbnails" >}}) is also a guide with more info and a [sample]({{< ref "thumbnail_sample" >}}) if you want to see how you can do it.
 
